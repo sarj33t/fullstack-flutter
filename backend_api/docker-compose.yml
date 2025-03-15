@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  backend_api:
+    build: .
+    image: dart-api-server
+    ports:
+      - "8080:8080"
+    volumes:
+      - .env:/app/.env
+    environment:
+      - ENV_FILE=/app/.env

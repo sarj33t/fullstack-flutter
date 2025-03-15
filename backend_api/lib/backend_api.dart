@@ -14,7 +14,7 @@ class BackendAPIServer{
         .addHandler(router.call);
 
     // Start the server
-    var server = await io.serve(handler, 'localhost', 8080);
+    var server = await io.serve(handler, '0.0.0.0', 8080);
     print('Server running on http://${server.address.host}:${server.port}');
   }
 }
